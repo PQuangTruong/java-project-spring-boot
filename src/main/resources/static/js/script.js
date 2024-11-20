@@ -58,65 +58,58 @@ $(function(){
 				numericOnly: true
 
 			}, img: {
-				required: true,
+				required: false,
 			}
 			
 		},
 		messages:{
 			name:{
-				required:'name required',
-				lettersonly:'invalid name'
+				required: 'Tên là bắt buộc',
+				lettersonly: 'Tên không hợp lệ'
 			},
 			email: {
-				required: 'email name must be required',
-				space: 'space not allowed',
-				email: 'Invalid email'
+				required: 'Email là bắt buộc',
+				space: 'Không được chứa khoảng trắng',
+				email: 'Email không hợp lệ'
 			},
 			mobileNumber: {
-				required: 'mob no must be required',
-				space: 'space not allowed',
-				numericOnly: 'invalid mob no',
-				minlength: 'min 10 digit',
-				maxlength: 'max 12 digit'
+				required: 'Số điện thoại là bắt buộc',
+				space: 'Không được chứa khoảng trắng',
+				numericOnly: 'Số điện thoại không hợp lệ',
+				minlength: 'Ít nhất 10 chữ số',
+				maxlength: 'Tối đa 12 chữ số'
 			},
-
 			password: {
-				required: 'password must be required',
-				space: 'space not allowed'
-
+				required: 'Mật khẩu là bắt buộc',
+				space: 'Không được chứa khoảng trắng'
 			},
 			confirmpassword: {
-				required: 'confirm password must be required',
-				space: 'space not allowed',
-				equalTo: 'password mismatch'
-
+				required: 'Xác nhận mật khẩu là bắt buộc',
+				space: 'Không được chứa khoảng trắng',
+				equalTo: 'Mật khẩu không khớp'
 			},
 			address: {
-				required: 'address must be required',
-				all: 'invalid'
-
+				required: 'Địa chỉ là bắt buộc',
+				all: 'Địa chỉ không hợp lệ'
 			},
-
 			city: {
-				required: 'city must be required',
-				space: 'space not allowed'
-
+				required: 'Thành phố là bắt buộc',
+				space: 'Không được chứa khoảng trắng'
 			},
 			state: {
-				required: 'state must be required',
-				space: 'space not allowed'
-
+				required: 'Tỉnh/Thành phố là bắt buộc',
+				space: 'Không được chứa khoảng trắng'
 			},
 			pincode: {
-				required: 'pincode must be required',
-				space: 'space not allowed',
-				numericOnly: 'invalid pincode'
-
+				required: 'Mã bưu điện là bắt buộc',
+				space: 'Không được chứa khoảng trắng',
+				numericOnly: 'Mã bưu điện không hợp lệ'
 			},
 			img: {
-				required: 'image required',
+				required: 'Ảnh đại diện là bắt buộc'
 			}
 		}
+
 	})
 	
 	
@@ -174,54 +167,49 @@ $orders.validate({
 			required: true
 			}
 		},
-		messages:{
-			firstName:{
-				required:'first required',
-				lettersonly:'invalid name'
-			},
-			lastName:{
-				required:'last name required',
-				lettersonly:'invalid name'
-			},
-			email: {
-				required: 'email name must be required',
-				space: 'space not allowed',
-				email: 'Invalid email'
-			},
-			mobileNo: {
-				required: 'mob no must be required',
-				space: 'space not allowed',
-				numericOnly: 'invalid mob no',
-				minlength: 'min 10 digit',
-				maxlength: 'max 12 digit'
-			}
-		   ,
-			address: {
-				required: 'address must be required',
-				all: 'invalid'
+	messages:{
+		firstName:{
+			required: 'Họ là bắt buộc',
+			lettersonly: 'Tên không hợp lệ'
+		},
+		lastName:{
+			required: 'Tên đệm là bắt buộc',
+			lettersonly: 'Tên không hợp lệ'
+		},
+		email: {
+			required: 'Email là bắt buộc',
+			space: 'Không được chứa khoảng trắng',
+			email: 'Email không hợp lệ'
+		},
+		mobileNo: {
+			required: 'Số điện thoại là bắt buộc',
+			space: 'Không được chứa khoảng trắng',
+			numericOnly: 'Số điện thoại không hợp lệ',
+			minlength: 'Ít nhất 10 chữ số',
+			maxlength: 'Tối đa 12 chữ số'
+		},
+		address: {
+			required: 'Địa chỉ là bắt buộc',
+			all: 'Địa chỉ không hợp lệ'
+		},
+		city: {
+			required: 'Thành phố là bắt buộc',
+			space: 'Không được chứa khoảng trắng'
+		},
+		state: {
+			required: 'Tỉnh/Thành phố là bắt buộc',
+			space: 'Không được chứa khoảng trắng'
+		},
+		pincode: {
+			required: 'Mã bưu điện là bắt buộc',
+			space: 'Không được chứa khoảng trắng',
+			numericOnly: 'Mã bưu điện không hợp lệ'
+		},
+		paymentType:{
+			required: 'Vui lòng chọn phương thức thanh toán'
+		}
+	}
 
-			},
-
-			city: {
-				required: 'city must be required',
-				space: 'space not allowed'
-
-			},
-			state: {
-				required: 'state must be required',
-				space: 'space not allowed'
-
-			},
-			pincode: {
-				required: 'pincode must be required',
-				space: 'space not allowed',
-				numericOnly: 'invalid pincode'
-
-			},
-			paymentType:{
-			required: 'select payment type'
-			}
-		}	
 })
 
 // Reset Password Validation
@@ -243,30 +231,19 @@ $resetPassword.validate({
 
 			}
 		},
-		messages:{
-		   password: {
-				required: 'password must be required',
-				space: 'space not allowed'
-
-			},
-			confirmpassword: {
-				required: 'confirm password must be required',
-				space: 'space not allowed',
-				equalTo: 'password mismatch'
-
-			}
-		}	
+	messages:{
+		password: {
+			required: 'Mật khẩu là bắt buộc',
+			space: 'Không được chứa khoảng trắng'
+		},
+		confirmpassword: {
+			required: 'Xác nhận mật khẩu là bắt buộc',
+			space: 'Không được chứa khoảng trắng',
+			equalTo: 'Mật khẩu không khớp'
+		}
+	}
 })
-
-
-
-	
-	
-	
-	
 })
-
-
 
 jQuery.validator.addMethod('lettersonly', function(value, element) {
 		return /^[^-\s][a-zA-Z_\s-]+$/.test(value);

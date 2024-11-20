@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table; // Import thêm @Table
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+@Table(name = "userdtls")  // Đảm bảo bảng tên là "userdtls" trong cơ sở dữ liệu
 public class UserDtls {
 
 	@Id
@@ -49,7 +51,7 @@ public class UserDtls {
 	private Integer failedAttempt;
 
 	private Date lockTime;
-	
+
 	private String resetToken;
 
 }
